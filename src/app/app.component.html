@@ -1,4 +1,5 @@
 <div>{{ title }}</div>
+<button (click)="sendMessage()">Send Message</button>
 <ul>
   <li *ngFor="let message of serverMessages">
     {{ message.content }}

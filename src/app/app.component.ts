@@ -33,4 +33,10 @@ export class AppComponent {
       () => { console.warn('socket completed!') }
     );
   }
+
+  sendMessage() {
+    console.log('sending message')
+    const message = new TrainMessage('Me', 'Sir... your train is here', false);
+    this.socket$.next(message);
+  }
 }
